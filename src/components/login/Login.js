@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-export const Login = () => {
-    return (
-        <div>
-            <h1>Login</h1>
-            <hr />
-        </div>
-    )
-}
+export const Login = ({ history }) => {
+  const handleLogin = () => {
+    history.push('/');
+  };
+
+  return (
+    <div>
+      <h1>Login</h1>
+      <hr />
+
+      <button className='btn btn-primary' onClick={handleLogin}>
+        Login
+      </button>
+    </div>
+  );
+};
